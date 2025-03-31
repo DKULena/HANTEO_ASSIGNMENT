@@ -1,4 +1,5 @@
-@import './variables.scss';
+@import './variables';
+@import './mixins';
 
 .app-container {
   width: 100%;
@@ -7,7 +8,43 @@
   background-color: $white;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  box-shadow: 0 0 10px rgba($black, .1);
   margin: 0 auto;
   position: relative;
+  overflow: hidden;
+  
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+  }
+  
+  &.transitioning::after {
+    opacity: 1;
+    z-index: 5;
+  }
+  
+  .sr-only {
+    @include sr-only;
+  }
+  
+  @include respond-to(mobile-only) {
+    border-radius: 0;
+  }
+  
+  @include respond-to(tablet) {
+    border-radius: 8px;
+    max-height: 900px;
+    margin: 20px auto;
+  }
 }
