@@ -1,0 +1,13 @@
+@import './variables.scss';
+
+.app-container {
+  width: 100%;
+  max-width: $mobile-width;
+  min-height: 100vh;
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  margin: 0 auto;
+  position: relative;
+}

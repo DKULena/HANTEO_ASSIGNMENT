@@ -1,0 +1,82 @@
+@import './variables.scss';
+
+.banner-slider {
+  width: 100%;
+  margin-bottom: 10px;
+  
+  .swiper-container {
+    width: 100%;
+  }
+
+  .swiper-slide {
+    width: 100%;
+  }
+
+  .banner {
+    width: 100%;
+    height: 180px;
+    background-color: #6a1b9a;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    color: white;
+    position: relative;
+  }
+
+  .banner-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .label {
+    display: inline-block;
+    background-color: #ff4081;
+    color: white;
+    font-size: $font-xs;
+    padding: 3px 8px;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    width: fit-content;
+  }
+
+  .title {
+    font-size: $font-md;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .date {
+    font-size: $font-xs;
+    color: #e0e0e0;
+  }
+
+  .vote-button {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    background-color: #ff4081;
+    color: white;
+    font-size: $font-xs;
+    padding: 5px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+
+  :global(.swiper-pagination) {
+    bottom: 10px !important;
+  }
+
+  :global(.swiper-pagination-bullet) {
+    width: 6px;
+    height: 6px;
+    margin: 0 3px;
+    background-color: rgba(255, 255, 255, 0.5);
+    opacity: 1;
+  }
+
+  :global(.swiper-pagination-bullet-active) {
+    background-color: #ff4081;
+  }
+}
