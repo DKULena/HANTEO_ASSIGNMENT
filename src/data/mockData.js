@@ -12,7 +12,7 @@ export const BANNERS = [
     id: 1,
     title: "[M COUNTDOWN] 10월 2주차 예고 사전 투표",
     date: "2020.02.08 10:00 ~ 2020.04.08 17:00 (KST)",
-    link: "https://example.com/vote1",
+    link: "https://hanteo-assignment-six.vercel.app/vote1",
     color: "#8e24aa",
     label: "진행중",
   },
@@ -20,7 +20,7 @@ export const BANNERS = [
     id: 2,
     title: "새로운 K-POP 스타 투표",
     date: "2020.03.10 10:00 ~ 2020.04.10 17:00 (KST)",
-    link: "https://example.com/vote2",
+    link: "https://hanteo-assignment-six.vercel.app/vote2",
     color: "#5e35b1",
     label: "신규",
   },
@@ -28,7 +28,7 @@ export const BANNERS = [
     id: 3,
     title: "이달의 아티스트 선정",
     date: "2020.04.01 10:00 ~ 2020.04.15 17:00 (KST)",
-    link: "https://example.com/artist",
+    link: "https://hanteo-assignment-six.vercel.app/artist",
     color: "#3949ab",
     label: "인기",
   },
@@ -100,7 +100,7 @@ export function generateContentItems(categoryId, count = 8) {
   return Array.from({ length: count }, (_, i) => ({
     id: `${categoryId}-${i + 1}`,
     title: titles[i % titles.length] || `${categoryId} 콘텐츠 ${i + 1}`,
-    link: `https://example.com/${categoryId}/${i + 1}`,
+    link: `https://hanteo-assignment-six.vercel.app/${categoryId}/${i + 1}`,
     imageUrl: null,
   }));
 }
@@ -123,7 +123,7 @@ export function fetchMoreItems(categoryId, page, itemsPerPage = 5) {
           title:
             titles[index % titles.length] ||
             `${categoryId} 콘텐츠 ${index + 1}`,
-          link: `https://example.com/${categoryId}/${index + 1}`,
+          link: `https://hanteo-assignment-six.vercel.app/${categoryId}/${index + 1}`,
           imageUrl: null,
         };
       });

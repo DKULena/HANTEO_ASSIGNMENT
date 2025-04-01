@@ -4,7 +4,7 @@ import TabMenu from "./components/TabMenu";
 import BannerSlider from "./components/BannerSlider";
 import ContentList from "./components/ContentList";
 import { useTouchSwipe } from "./hooks/useTouchSwipe";
-import { TABS, BANNERS, generateContentItems } from "./data/mockData";
+import { TABS, generateContentItems, BANNERS } from "./data/mockdata";
 
 function App() {
   const [activeTab, setActiveTab] = useState("chart");
