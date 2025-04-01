@@ -119,11 +119,11 @@ export function fetchMoreItems(categoryId, page, itemsPerPage = 5) {
       const items = Array.from({ length: itemsPerPage }, (_, i) => {
         const index = startIndex + i;
         return {
-          id: `${categoryId}-${index + 1}`,
+          id: `${categoryId}-page${page}-${index + 1}`,
           title:
             titles[index % titles.length] ||
             `${categoryId} 콘텐츠 ${index + 1}`,
-          link: `https://hanteo-assignment-six.vercel.app/${categoryId}/${index + 1}`,
+          link: `https://example.com/${categoryId}/${index + 1}`,
           imageUrl: null,
         };
       });
@@ -135,3 +135,4 @@ export function fetchMoreItems(categoryId, page, itemsPerPage = 5) {
     }, 800);
   });
 }
+
