@@ -1,3 +1,4 @@
+```
 hanteo-coding/
 ├── node_modules/
 ├── public/
@@ -34,3 +35,4 @@ hanteo-coding/
 ├── README.md
 ├── vite.config.js
 └── yarn.lock
+```
